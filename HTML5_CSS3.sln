@@ -5,22 +5,28 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{932EBBDC-C455-49E1-A507-47A1940D588E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "웹페이지 레이아웃 연습1", "웹페이지 레이아웃 연습1", "{F43BB576-FC9C-4CFA-A12B-3479BAF708E4}"
-	ProjectSection(SolutionItems) = preProject
-		WebPageLayout1.html = WebPageLayout1.html
-		WPLCss1.css = WPLCss1.css
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "웹페이지 레이아웃 연습2", "웹페이지 레이아웃 연습2", "{D3DCB14E-975E-4A7F-BB51-258E4BF0776D}"
-	ProjectSection(SolutionItems) = preProject
-		WebPageLayout2.html = WebPageLayout2.html
-		WPLCss2.css = WPLCss2.css
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "웹페이지 레이아웃 연습3", "웹페이지 레이아웃 연습3", "{5162B7CC-10EB-43E1-9BBB-8FF0991CD59E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "웹페이지 레이아웃 연습", "웹페이지 레이아웃 연습", "{5162B7CC-10EB-43E1-9BBB-8FF0991CD59E}"
 	ProjectSection(SolutionItems) = preProject
 		WebPageLayout.html = WebPageLayout.html
 		WPLCss.css = WPLCss.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "블로그 템플릿", "블로그 템플릿", "{A009F689-44E0-4D7C-AD68-38C2279E7B75}"
+	ProjectSection(SolutionItems) = preProject
+		Blog Template.html = Blog Template.html
+		w3.css = w3.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "미식 블로그 템플릿", "미식 블로그 템플릿", "{9954A8F9-DAB8-4A51-8FD3-38F37E6B67AD}"
+	ProjectSection(SolutionItems) = preProject
+		Gourmet.css = Gourmet.css
+		GourmetCateringTemplate.html = GourmetCateringTemplate.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "건설회사 템플릿", "건설회사 템플릿", "{048B0230-D6F7-42FE-A315-FC402074E55D}"
+	ProjectSection(SolutionItems) = preProject
+		Architects.css = Architects.css
+		Architects.html = Architects.html
 	EndProjectSection
 EndProject
 Global
@@ -28,9 +34,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F43BB576-FC9C-4CFA-A12B-3479BAF708E4} = {932EBBDC-C455-49E1-A507-47A1940D588E}
-		{D3DCB14E-975E-4A7F-BB51-258E4BF0776D} = {932EBBDC-C455-49E1-A507-47A1940D588E}
 		{5162B7CC-10EB-43E1-9BBB-8FF0991CD59E} = {932EBBDC-C455-49E1-A507-47A1940D588E}
+		{A009F689-44E0-4D7C-AD68-38C2279E7B75} = {932EBBDC-C455-49E1-A507-47A1940D588E}
+		{9954A8F9-DAB8-4A51-8FD3-38F37E6B67AD} = {932EBBDC-C455-49E1-A507-47A1940D588E}
+		{048B0230-D6F7-42FE-A315-FC402074E55D} = {932EBBDC-C455-49E1-A507-47A1940D588E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF2EE8A8-0951-4A8F-9857-026A02668A11}
