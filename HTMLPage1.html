@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <script src="https://kit.fontawesome.com/f3e90f406f.js"></script>
+    <style>
+        /*초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        #main_header {
+            position: relative;
+            overflow: hidden;
+            width: 980px;
+            height: 180px;
+            background-color: white;
+        }
+
+            #main_header > div.login_menu {
+                position: absolute;
+                top: 10px;
+                right: 0px;
+            }
+
+                #main_header > div.login_menu > span {
+                    padding: 0 5px;
+                }
+
+                    #main_header > div.login_menu > span > a {
+                        color: darkgray;
+                    }
+
+            #main_header > div.top_gnb {
+                position: absolute;
+                top: 50px;
+                left: 0px;
+            }
+
+                #main_header > div.top_gnb > span {
+                    padding: 0 20px;
+                }
+
+                    #main_header > div.top_gnb > span > a {
+                        color: darkgray;
+                        font-size: 20px;
+                    }
+
+            #main_header > div.top_search {
+                position: absolute;
+                top: 70px;
+                right: 0px;
+                border: 1px solid black;
+            }
+
+            #main_header > div.bottom_gnb {
+                position: absolute;
+                top: 140px;
+                left: 0;
+                width: 980px;
+                height: 25px;
+            }
+
+                #main_header > div.bottom_gnb > span {
+                    float: left;
+                    width: 56px;
+                    text-align: center;
+                }
+
+                    #main_header > div.bottom_gnb > span > a {
+                        font-size: 10px;
+                    }
+
+                #main_header > div.bottom_gnb > hr {
+                    color: darkgray;
+                }
+
+        #main_content {
+            width:980px;
+        }
+    </style>
+
+    <!--슬라이드 쇼-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /*Slideshow container*/
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /*Hide the images by default*/
+        .mySlides {
+            display: none;
+        }
+
+        /*Caption text*/
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /*Number text(1/3 etc)*/
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators*/
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+        /*Fading animation*/
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .prev, .next, .text {
+                font-size: 11px
+            }
+        }
+    </style>
+
+    <!--그리드 레이아웃-->
+    <style>
+        .grid-container{
+            display:inline-grid;
+            width:980px;
+            grid-template-columns:auto auto;
+            text-align:center;
+            grid-column-gap:10px;
+            grid-row-gap:10px;
+        }
+        .grid-item{
+
+        }
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div class="login_menu">
+            <span><a href="#"><i class="fab fa-instagram"></i></a></span>
+            <span><a href="#"><i class="fab fa-facebook-square"></i></a></span>
+            <span><a href="#">로그인</a></span>
+            <span><a href="#">회원가입</a></span>
+            <span><a href="#">장바구니</a></span>
+            <span><a href="#">주문조회</a></span>
+            <span><a href="#">배송조회</a></span>
+            <span><a href="#">마이페이지</a></span>
+            <span><a href="#">공지사항</a></span>
+            <span><a href="#">개인결제</a></span>
+            <span><a href="#">입고지연</a></span>
+            <span><a href="#">고객센터</a></span>
+        </div>
+        <div class="top_gnb">
+            <span><a href="#" style="font-size:40px; font-weight:600; color:black;">HUNS</a></span>
+            <span><a href="#" style="color:red; font-weight:600">store</a></span>
+            <span><a href="#">unisex</a></span>
+            <span><a href="#">codi</a></span>
+            <span><a href="#">review</a></span>
+        </div>
+        <div class="top_search">
+            <span id="search"><i class="fas fa-search" style="color:darkgray; font-size:20px; padding:10px 10px;">검색</i>   <input type="search" style="height:30px; border:none; padding:10px 10px;"/></span>
+        </div>
+        <div class="bottom_gnb">
+            <hr />
+            <span><a href="#">BEST</a></span>
+            <span><a href="#">NEW</a></span>
+            <span><a href="#">OPTION</a></span>
+            <span style="width:60px;"><a href="#" ">얼리버드특가</a></span>
+            <span><a href="#">HUNS</a></span>
+            <span><a href="#">오늘방송</a></span>
+            <span><a href="#">1+1</a></span>
+            <span><a href="#">린넨</a></span>
+            <span><a href="#">티셔츠</a></span>
+            <span><a href="#">셔츠</a></span>
+            <span><a href="#">니트/가디건</a></span>
+            <span><a href="#">아우터</a></span>
+            <span><a href="#">바지</a></span>
+            <span><a href="#">트레이닝</a></span>
+            <span><a href="#">신발</a></span>
+            <span><a href="#">악세사리</a></span>
+            <span><a href="#">오늘의특가</a></span>
+            <br />
+            <hr />
+        </div>
+    </header>
+    <content id="main_content">
+        <div>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade" style="position:relative;">
+                    <img src="Images/SlideImage1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="Images/SlideImage2.png" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="Images/SlideImage3.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Images/SlideImage4.png" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="Images/SlideImage5.png" style="width:100%">
+                </div>
+
+                <div style="position:relative; text-align:center; top:-45px;">
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="Script1.js">
+
+        </script>
+
+        <div class="grid-container">
+            <div class="grid-item"><img src="Images/content-Image1.png" /></div>
+            <div class="grid-item"><img src="Images/content-Image2.png" /></div>
+            <div class="grid-item"><img src="Images/content-Image3.png" /></div>
+            <div class="grid-item"><img src="Images/content-Image4.png" /></div>
+        </div>
+
+        <br />
+        <br />
+        <hr />
+        <br />
+        <!--OPTION SALE-->
+        <div>
+            <h1 style="font-size:20px">OPTION SALE</h1>
+            <br />
+            <div class="grid-container" style="grid-template-columns:auto auto auto;">
+                <a href="#">
+                    <img src="Images/OPTION_SALE_IMAGE1.png" />
+                    <p style="font-size:10px;">(한정수량★옵션세일★오늘발송)비건 스트라이프 반팔 티셔츠</p>
+                    <p style="color:darkgray;">5 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">29,000원</p>
+                    <p><strong style="color:red;">69%</strong> 8,900원</p>
+                </a>
+                <a href="#">
+                    <img src="Images/OPTION_SALE_IMAGE2.png" />
+                    <p style="font-size:10px;">(한정수량★옵션세일★오늘발송)디에이드 단가라 반팔티</p>
+                    <p style="color:darkgray;">6 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">21,000원</p>
+                    <p><strong style="color:red;">72%</strong>5,900원</p>
+                </a>
+                <a href="#">
+                    <img src="Images/OPTION_SALE_IMAGE3.png" />
+                    <p style="font-size:10px;">(한정수량★옵션세일★오늘발송)비건 스트라이프 반팔 티셔츠</p>
+                    <p style="color:darkgray;">5 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">29,000원</p>
+                    <p><strong style="color:red;">69%</strong> 8,900원</p>
+                </a>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <hr />
+        <br />
+        <div>
+            <h1 style="font-size:20px">스토어 베스트 상품</h1>
+            <br />
+            <div class="grid-container" style="grid-template-columns:auto auto auto; grid-row-gap:15px;">
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE1.png" />
+                    <p style="font-size:10px;">(오늘발송)[1+1]20수 단가라 반팔티</p>
+                    <p style="color:darkgray;">7 color / 2 size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">35,000원</p>
+                    <p><strong style="color:red;">74% </strong>9,000원</p>
+                </a>
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE2.png" />
+                    <p style="font-size:10px;">(오늘발송)스티치 린넨 반팔셔츠 SET</p>
+                    <p style="color:darkgray;">2 type / 5 color / 2 size</p>
+                    <p style="color:darkgray; text-decoration:line-through;"></p>
+                    <p><strong style="color:red;"></strong>5,000원</p>
+                </a>
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE3.png" />
+                    <p style="font-size:10px;">(오늘발송)엠보 오버핏 라운드 반팔티</p>
+                    <p style="color:darkgray;">8 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">21,000원</p>
+                    <p><strong style="color:red;">67% </strong>6,900원</p>
+                </a>
+
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE4.png" />
+                    <p style="font-size:10px;">(오늘발송)핀단가라 오버핏 반팔티</p>
+                    <p style="color:darkgray;">10 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">19,000원</p>
+                    <p>
+                        <strong style="color:red;">48% </strong>9,900원
+                    </p>
+                </a>
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE5.png" />
+                    <p style="font-size:10px;">(오늘발송)파스텔 7부 오버핏 티셔츠</p>
+                    <p style="color:darkgray;">12 color / FREE size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">29,000원</p>
+                    <p><strong style="color:red;">69%</strong>8,900원</p>
+                </a>
+                <a href="#">
+                    <img src="Images/STORE_BEST_IMAGE6.png" />
+                    <p style="font-size:10px;">편안한 9부 밴딩팬츠</p>
+                    <p style="color:darkgray;">5 color / 4 size</p>
+                    <p style="color:darkgray; text-decoration:line-through;">30,000원</p>
+                    <p><strong style="color:red;">67% </strong>9,900원</p>
+                </a>
+            </div>
+        </div>
+    </content>
+</body>
+</html>
